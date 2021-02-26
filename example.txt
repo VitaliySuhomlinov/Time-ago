@@ -1,0 +1,61 @@
+# Time-ago
+Implementation of the function, in php, that returns a string or array with data about how much time has passed from the specified date to the current moment. If you need a function that allows you to display, for example, the publication of an article or video in the time ago format, this is what you need.
+The function can be called with one argument (the date from which the elapsed time needs to be calculated) and then the result will be in string form.
+For example, if today is February 26, 2021
+
+$start_time = '2012-01-16 16:02:45';
+echo time_ago ($ start_time); // 9 years and 1 month ago
+
+$start_time = '2012-02-16 16:02:45';
+echo time_ago ($ start_time); // 9 years ago
+
+$start_time = '2021-02-16 16:02:45';
+echo time_ago ($start_time); // 10 days ago
+
+If you pass true as the second argument, the function will return an array with all the values from which you can form the result in the format you need.
+$start_time = '2021-02-16 16:02:45';
+$res = time_ago ($start_time, true);
+echo '<pre>';
+print_r ($res);
+echo '</pre>';
+
+Result -> Array
+(
+    [y] => 0
+    [m] => 0
+    [d] => 10 days
+    [h] => 1 hour
+    [min] => 22 minutes
+    [s] => 13 seconds
+)
+
+Time-ago (RU)
+Реализация функции, на языке php, возвращающая строку или массив с данными о том, сколько времени прошло от указаной  даты до текущего момента. 
+Если вам необходима функция позволяющая вывести, например, дату публикации статьи или видео в формате time ago, это то, что вам нужно.
+Функцию можно вызвать с одним аргументом (датой, от которой нужно посчитать прошедшее время) и тогда результат будет в строковом виде. 
+Например, если сегодня 26 февраля 2021 года 
+$start_time = '2012-01-16 16:02:45';
+echo time_ago($start_time);//9 years and 1 month ago
+
+$start_time = '2012-02-16 16:02:45';
+echo time_ago($start_time);//9 years ago
+
+$start_time = '2021-02-16 16:02:45';
+echo time_ago($start_time);//10 days ago
+
+Если же передать в качестве второго аргумента true, функция вернет массив со всеми значениями, из которых вы сможете сформировать результат в нужном вам фомате.
+$start_time = '2021-02-16 16:02:45';
+$res = time_ago($start_time,  true);
+echo '<pre>';
+print_r($res);
+echo '</pre>';
+
+Result -> Array
+(
+    [y] => 0
+    [m] => 0
+    [d] => 10 days
+    [h] => 1 hour
+    [min] => 22 minutes
+    [s] => 13 seconds
+)
